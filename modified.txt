@@ -458,7 +458,7 @@ an interval check, and the bedside nurse asks the intensivist what type of
 resuscitative fluid should be used at that point.
 Compared to low-chloride resuscitative fluids (ie, balanced saline solutions), the
 use of high-chloride resuscitative fluids (ie, NS) for septic patients requiring
-abdominal surgery is associated with
+abdominal surgery is associated with?
 A. a higher rate of in-hospital mortality
 B. a higher rate of metabolic alkalosis
 C. a lower rate of acute kidney injury
@@ -1858,7 +1858,7 @@ E. A sudden increase in ETCO2 during chest compressions can be a sign of
 return of spontaneous circulation.
 28. The arterial line tracing shown below is from a patient on positive pressure
 mechanical ventilation. Which letter best corresponds to the inspiratory phase of
-a positive pressure breath
+a positive pressure breath?
 A. A
 B. B
 C. C
