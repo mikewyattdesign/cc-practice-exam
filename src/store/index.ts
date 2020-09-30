@@ -5,6 +5,7 @@ import { Question } from '../models/question'
 Vue.use(Vuex)
 
 
+
 function shuffle(array: any[]) {
   let i = array.length - 1;
   for (i; i > 0; i--) {
@@ -16,10 +17,38 @@ function shuffle(array: any[]) {
   return array;
 }
 
+export function getAnsweredQuestions(): any[] {
+  let answeredQuestions = [];
+  if (localStorage.getItem('questions') != null) {
+    answeredQuestions = JSON.parse(localStorage.getItem('questions') as string);
+  }
+
+  return answeredQuestions;
+}
+
+export function saveAnsweredQuestions(newQuestions: Question[]) {
+  let answeredQuestions = getAnsweredQuestions();
+  answeredQuestions = answeredQuestions.concat(...newQuestions.map(value => ({
+    part: value.part,
+    index: value.index,
+    correct_answer: value.correct_answer,
+    chosen_answer: value.chosen_answer,
+    answers: value.answers,
+    prompt: value.prompt,
+    rationale: value.rationale,
+  })));
+
+  localStorage.setItem('questions', JSON.stringify(answeredQuestions));
+}
+
 export default new Vuex.Store({
   state: {
     currentQuestionIndex: 0,
-    questions: shuffle(originalQuestionSet).slice(0, 10).map((value) => new Question(value))
+    questions: shuffle(
+      originalQuestionSet
+        .filter((original: any) => (getAnsweredQuestions() as any[]).indexOf((target: any) => target.part == original.part && target.index == original.index) < 0)
+    )
+      .slice(0, 10).map((value) => new Question(value))
   },
   mutations: {
     previousQuestion(state) {
@@ -30,6 +59,9 @@ export default new Vuex.Store({
     },
     saveQuestion(state, payload: string) {
       (state.questions[state.currentQuestionIndex] as Question).chosen_answer = payload;
+    },
+    saveQuestions(state) {
+      saveAnsweredQuestions(state.questions);
     }
   },
   actions: {

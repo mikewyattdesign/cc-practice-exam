@@ -165,6 +165,9 @@ export default class App extends Vue {
   @Mutation
   saveQuestion !: (payload: string | undefined) => void;
 
+  @Mutation
+  saveQuestions !: () => void;
+
   submitQuestion() {
     this.saveQuestion(this.selectedAnswer)
   }
@@ -177,6 +180,13 @@ export default class App extends Vue {
   next() {
     this.nextQuestion();
     window.scrollTo(0, 0);
+  }
+
+  @Watch("complete")
+  handleCompletion(value: boolean) {
+    if (value == true) {
+      this.saveQuestions()
+    }
   }
 }
 </script>
