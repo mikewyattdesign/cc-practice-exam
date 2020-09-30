@@ -49,6 +49,9 @@ export default new Vuex.Store({
     },
     total(state): number {
       return state.questions.length;
+    },
+    complete(_, getters): boolean {
+      return getters.answered == getters.total;
     }
   }
 })

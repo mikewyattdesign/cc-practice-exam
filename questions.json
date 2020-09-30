@@ -2135,10 +2135,13 @@
     {
         "part": "Gastrointestinal Disorders",
         "answers": [
-            "Administration of fresh frozen plasma"
+            "systemic steroids",
+            "antibiotics",
+            "thiamine",
+            "immunoglobulin"
         ],
         "index": "11",
-        "prompt": "A 42-year-old woman has a two-week history of nausea and vomiting. She had bariatric surgery two months ago. She reports generalized weakness, fatigue, confusion, weakness of the lower extremities associated with numbness in both hands and feet, and blurry vision. Physical examination shows sinus tachycardia, horizontal nystagmus, and peripheral neuropathy with muscle weakness and decreased reflexes. The most appropriate next step is IV administration of A. systemic steroids B. antibiotics C. thiamine D. immunoglobulin",
+        "prompt": "A 42-year-old woman has a two-week history of nausea and vomiting. She had bariatric surgery two months ago. She reports generalized weakness, fatigue, confusion, weakness of the lower extremities associated with numbness in both hands and feet, and blurry vision. Physical examination shows sinus tachycardia, horizontal nystagmus, and peripheral neuropathy with muscle weakness and decreased reflexes. The most appropriate next step is IV administration of",
         "correct_answer": "C",
         "rationale": "Thiamin deficiency is rare and mostly caused by depletion of vitamin B1 stores. People may become deficient in thiamin by not ingesting enough vitamin B1 in the diet or through the body\u2019s excess use; the latter may result from hyperthyroidism, pregnancy, lactation, or fever. Thiamin deficiency can occur after bariatric surgery. With nervous system involvement, it is called dry beriberi. Neurologic findings can be peripheral neuropathy characterized by symmetrical impairment of sensory, motor, and reflex functions of the extremities, especially in the distal lower limbs. The peripheral neuropathy in thiamin deficiency may also present with a subacute motor axonal neuropathy, mimicking Guillain-Barr\u00e9 syndrome. Another presentation of neurologic involvement is Wernicke encephalopathy, in which an orderly sequence of symptoms occurs, including vomiting, horizontal nystagmus, palsies of the eye movements, fever, ataxia, and progressive mental impairment, leading to Korsakoff syndrome. Prognosis is good since the condition mostly responds to thiamin replacement. References: 1. Isselbacher KJ. Harrison\u2019s Principles of Internal Medicine. 13th ed. New York: McGraw-Hill; 1994:474-475. 2. Spinazzi M, Angelini C, Patrini C. Subacute sensory ataxia and optic neuropathy with thiamine deficiency. Nat Rev Neurol. 2010 May;6(5):288-293. 3. Matrana MR, Davis WE. Vitamin deficiency after gastric bypass surgery: a review. South Med J. 2009 Oct;102(10):1025-1031. 4. Karuppagounder SS, Xu H, Pechman D, Chen LH, DeGiorgio LA, Gibson GE. Translocation of amyloid precursor protein C-terminal fragment(s) to the nucleus precedes neuronal death due to thiamine deficiency-induced mild impairment of oxidative metabolism. Neurochem Res. 2008 Jul;33(7):1365-1372"
     },
