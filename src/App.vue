@@ -68,6 +68,7 @@
         <button
           class="primary"
           id="submit"
+          v-if="false"
           :disabled="chosenAnswerIndex == null"
           @click="submitQuestion"
         >
@@ -142,6 +143,13 @@ export default class App extends Vue {
   public get selectedAnswer(): string | undefined {
     if (this.chosenAnswerIndex == null) return undefined
     return this.letterFromAnswerIndex(this.chosenAnswerIndex)
+  }
+  @Watch('selectedAnswer')
+  handleAnswerChoice(value: any) {
+    if (this.complete) return;
+    if (value !== undefined) {
+      this.submitQuestion()
+    }
   }
 
   public letterFromAnswerIndex(index: number): string {
