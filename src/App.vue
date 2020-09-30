@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="question-header">
+    <div class="question-header" id="header">
       <div class="progress">
         <div>{{ answered }} answered out of {{ total }}</div>
         <progress :max="total" :value="answered"></progress>
@@ -52,19 +52,17 @@
       {{ rationale }}
     </div>
     <div class="navigation">
-      <button v-if="!complete && previousEnabled" @click="previousQuestion">
+      <button v-if="!complete && previousEnabled" @click="previous">
         &larr; Previous
       </button>
-      <button v-if="!complete && nextEnabled" @click="nextQuestion">
-        Next &rarr;
-      </button>
+      <button v-if="!complete && nextEnabled" @click="next">Next &rarr;</button>
     </div>
     <footer class="question-footer">
       <div class="navigation" v-if="complete">
-        <button v-if="previousEnabled" @click="previousQuestion">
+        <button v-if="previousEnabled" @click="previous">
           &larr; Previous
         </button>
-        <button v-if="nextEnabled" @click="nextQuestion">Next &rarr;</button>
+        <button v-if="nextEnabled" @click="next">Next &rarr;</button>
       </div>
       <div class="actions" v-if="!complete">
         <button
@@ -161,6 +159,16 @@ export default class App extends Vue {
 
   submitQuestion() {
     this.saveQuestion(this.selectedAnswer)
+  }
+
+  previous() {
+    this.previousQuestion();
+    window.scrollTo(0, 0);
+  }
+
+  next() {
+    this.nextQuestion();
+    window.scrollTo(0, 0);
   }
 }
 </script>
