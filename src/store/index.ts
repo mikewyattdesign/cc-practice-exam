@@ -48,7 +48,7 @@ export default new Vuex.Store({
       originalQuestionSet
         .filter((original: any) => (getAnsweredQuestions() as any[]).indexOf((target: any) => target.part == original.part && target.index == original.index) < 0)
     )
-      .slice(0, 10).map((value) => new Question(value))
+      .slice(0, 25).map((value) => new Question(value))
   },
   mutations: {
     previousQuestion(state) {
